@@ -1,0 +1,14 @@
+name: CI
+on:
+  push:
+    branches: [ main, "ci/*", "docs/*" ]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Placeholder (always green)
+        run: echo "Phase-0 placeholder CI for Hyper Hash — always succeeds."
